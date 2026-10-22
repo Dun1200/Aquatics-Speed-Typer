@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b4c">
+  <meta name="description" content="A quick, aquatic-themed typing sprint for lifeguard training rotations.">
+  <title>Poolside Typing Sprint</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Poolside Typing Sprint home">
+        <span class="brand-mark" aria-hidden="true">≈</span>
+        <span>POOL<span class="brand-light">SIDE</span><small>TRAINING SPRINT</small></span>
+      </a>
+      <div class="rotation-label"><span class="status-dot"></span> FIRST AID OFFICE ROTATION</div>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">60-SECOND TYPING CHALLENGE</p>
+        <h1 id="page-title">Make waves.<br><span>Mind your accuracy.</span></h1>
+        <p class="lede">Pick up the pace, keep your strokes clean, and see how much of the fact you can finish.</p>
+      </div>
+      <div class="clock-card" aria-label="Round length, 60 seconds">
+        <span class="clock-icon" aria-hidden="true">◷</span>
+        <div><strong>01:00</strong><small>ONE QUICK ROUND</small></div>
+      </div>
+    </section>
+
+    <section class="typing-card" aria-label="Typing challenge">
+      <div class="prompt-meta"><span class="fact-icon" aria-hidden="true">✦</span><span>AQUATICS FACT</span><span class="prompt-count" id="prompt-count">FACT 01 / 08</span><button class="reset-button" id="reset-button" type="button">↻ &nbsp;New fact</button></div>
+      <h2 id="prompt-title">Why pool water can look blue</h2>
+      <div class="typing-stage" id="typing-stage">
+        <div class="typing-display" id="typing-display" aria-hidden="true"></div>
+        <textarea id="typing-input" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Type the displayed aquatic fact" aria-describedby="typing-help" maxlength="600"></textarea>
+      </div>
+      <div class="typing-bottom"><span id="typing-help">Click the fact and type. The timer starts with your first keystroke.</span><span class="key-hint">Correct letters dim · mistakes turn red</span></div>
+    </section>
+
+    <section class="stats" aria-label="Round statistics">
+      <div class="stat-card timer-stat"><span class="stat-label">TIME LEFT</span><strong id="timer">01:00</strong></div>
+      <div class="stat-card"><span class="stat-label">TYPING SPEED</span><strong><span id="wpm">0</span><small> WPM</small></strong></div>
+      <div class="stat-card"><span class="stat-label">ACCURACY</span><strong><span id="accuracy">100</span><small>%</small></strong></div>
+      <div class="stat-card"><span class="stat-label">FACT PROGRESS</span><strong><span id="completion">0</span><small>%</small></strong></div>
+      <button class="start-button" id="start-button" type="button">START ROUND <span aria-hidden="true">→</span></button>
+    </section>
+    <footer><span>SWIM SMART. TYPE SHARP.</span><span>Build speed, keep your accuracy, and finish the fact.</span></footer>
+    <div class="finish-banner" id="finish-banner" role="status" aria-live="polite" hidden></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
